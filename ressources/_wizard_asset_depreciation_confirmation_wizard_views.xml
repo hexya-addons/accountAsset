@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hexya>
+    <data>
+	<view id="view_asset_depreciation_confirmation_wizard" model="AssetDepreciationConfirmationWizard" >
+            <form string="Compute Asset">
+                <div>
+                    <p>
+                        This wizard will post installment/depreciation lines for the selected month.<br/>
+                        This will generate journal entries for all related installment lines on this period of asset/revenue recognition as well.
+                    </p> 
+                </div>
+                <group>
+                    <field name="date"/>
+                </group>
+                <footer>
+                    <button string="Generate Entries" name="asset_compute" type="object" class="btn-primary"/>
+                    <button string="Cancel" class="btn-default" special="cancel"/>
+                </footer>
+            </form>
+         </view>
+        <action id="action_asset_depreciation_confirmation_wizard" type="ir.actions.act_window" name="Post Depreciation Lines" model="AssetDepreciationConfirmationWizard" view_mode="tree,form" view_id="view_asset_depreciation_confirmation_wizard"></action>
+    </data>
+</hexya>

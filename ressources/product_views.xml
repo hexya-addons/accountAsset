@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hexya>
+    <data>
+	<view id="view_product_template_form_inherit" model="ProductTemplate" >
+            <field name="property_account_expense_id" position="before">
+                <field name="asset_category_id"
+                    domain="[('type', '=', 'purchase')]"
+                    context="{'default_type': 'purchase'}"/>
+            </field>
+        </view>
+    </data>
+</hexya>

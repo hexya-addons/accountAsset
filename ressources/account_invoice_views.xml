@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hexya>
+    <data>
+	<view id="view_invoice_asset_category" model="AccountInvoice" >
+            <xpath expr="//field[@name='invoice_line_ids']/tree/field[@name='account_id']" position="before">
+                <field string="Asset Category" name="asset_category_id" domain="[('type','=','purchase')]" context="{'default_type':'purchase'}"/>
+            </xpath>
+        </view>
+    </data>
+</hexya>
